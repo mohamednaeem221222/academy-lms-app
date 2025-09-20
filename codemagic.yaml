@@ -3,11 +3,10 @@ workflows:
     name: Android Build Workflow
     environment:
       groups: []
-      flutter: "3.19.5"
+      flutter: "stable"  # استخدام أحدث إصدار مستقر تلقائياً
     scripts:
-      - name: Disable analytics and build APK
+      - name: Build APK
         script: | 
-          flutter config --no-analytics
           flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
