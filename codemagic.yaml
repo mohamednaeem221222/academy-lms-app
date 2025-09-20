@@ -5,11 +5,8 @@ workflows:
       groups: []
       flutter: "3.19.5"
     scripts:
-      - name: Set up Gradle
-        script: |
-          cd android
-          ./gradlew wrapper --gradle-version=7.6.4
       - name: Build APK
-        script: flutter build apk --release
+        script: | 
+          flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
