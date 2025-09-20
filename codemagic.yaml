@@ -5,8 +5,9 @@ workflows:
       groups: []
       flutter: "3.19.5"
     scripts:
-      - name: Build APK
+      - name: Disable analytics and build APK
         script: | 
-          flutter build apk --release --no-analytics
+          flutter config --no-analytics
+          flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
