@@ -3,8 +3,12 @@ workflows:
     name: Android Build Workflow
     environment:
       groups: []
-      flutter: "stable"  # استخدام أحدث إصدار مستقر تلقائياً
+      flutter: "3.4.0"  # استخدام إصدار محدد لحل مشكلة البناء
+      xcode: "15.0"
     scripts:
+      - name: Get Flutter dependencies
+        script: |
+          flutter pub get
       - name: Build APK
         script: | 
           flutter build apk --release
