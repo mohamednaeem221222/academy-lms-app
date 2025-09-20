@@ -3,7 +3,7 @@ workflows:
     name: Android Build Workflow
     environment:
       groups: []
-      flutter: "3.4.0"  # استخدام إصدار محدد لحل مشكلة البناء
+      flutter: "stable"  # استخدام أحدث إصدار مستقر لحل مشكلة البناء
       xcode: "15.0"
     scripts:
       - name: Get Flutter dependencies
